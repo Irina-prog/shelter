@@ -1,0 +1,45 @@
+.link {
+    color: $color-inactive;
+    line-height: 160%;
+    @extend %font-add;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    @include media-mobile-big {
+        font-size: 32px;
+        line-height: 52px;
+    }
+
+    &.link_dark-theme {
+        color: $color-inactive;
+    }
+
+    &:hover {
+        color: #FAFAFA;
+    }
+
+    &.link_light-theme {
+        color: $color-text-dark;
+
+        &:hover {
+            color: $color-text-dark-hover
+        }
+    }
+
+    &.link_active {
+        color: $color-text-active;
+        border-bottom: 3px solid $color-primary;
+        padding-bottom: 5px;
+
+        &.link_active_dark-theme {
+            color: $color-text-dark-hover;
+
+        }
+    }
+
+    &.link_disabled {
+        pointer-events: none;
+        /* делаем элемент неактивным для взаимодействия */
+        cursor: default;
+    }
+}

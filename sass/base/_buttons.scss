@@ -1,0 +1,93 @@
+.button {
+    padding: 15px 45px;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    border: 2px solid $color-border;
+    border-radius: 100px;
+    color: $color-text-button;
+    cursor: pointer;
+
+    &_colored {
+        background-color: $color-primary;
+        transition: 0.5s;
+
+        @include media-mobile-small {
+            align-self: center;
+        }
+    }
+
+    &_on-card {
+        background-color: $color-text-light;
+    }
+
+    &_round {
+        padding: 15px 15px;
+        height: 52px;
+        width: 52px;
+
+        &.button_popup {
+            background-image: url("../assets/icons/cross.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            position: absolute;
+            top: -50px;
+            right: -45px;
+
+            @include media-mobile-small {
+                top: -55px;
+                right: -28px;
+            }
+        }
+
+
+        &.button_pagination {
+            text-align: center;
+            font-size: 2rem;
+            line-height: 115%;
+            text-align: center;
+            letter-spacing: 0.06em;
+            padding: 0;
+            align-self: center;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            background-color: $color-light-background;
+
+            &.button_active {
+                background-color: $color-primary;
+            }
+        }
+
+        &:disabled {
+            color: $color-inactive;
+            border-color: $color-inactive;
+            cursor: auto;
+        }
+
+    }
+
+    &_arrow {
+        background-image: url("../assets/icons/left-arrow.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: $color-light-background;
+    }
+
+    &_arrow-right {
+        transform: rotate(180deg);
+    }
+
+    &:hover {
+
+        &:not([disabled]) {
+            background-color: $color-button-hover;
+            @include smooth;
+
+        }
+    }
+
+}

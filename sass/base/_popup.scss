@@ -1,0 +1,110 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(41, 41, 41, 0.6);
+    overflow-y: hidden;
+
+    .popup__wrapper {
+        position: absolute;
+        width: 900px;
+        height: 500px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: $color-cards;
+        border-radius: $dialog-border-radius;
+        
+
+        @include media-tablet {
+            width: 630px;
+            height: 350px;
+
+        }
+
+        @include media-mobile-small {
+            width: 240px;
+            height: 341px;
+        }
+    }
+
+    .popup__content {
+        display: flex;
+        flex-direction: row;
+
+        .popup__pet-picture {
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+            border-bottom-left-radius: 9px;
+            border-top-left-radius: 9px;
+            @include media-tablet {
+                width: 350px;
+                height: 350px;
+            }
+
+            @include media-mobile-small {
+
+                flex-wrap: wrap;
+                display: none;
+            }
+        }
+
+        .popup__pet-description {
+            margin: 0 20px 0 30px;
+
+            @include media-tablet {
+                margin: 0 10px;
+            }
+
+            .pet-description__name {
+                margin: 50px 0 0 0;
+
+                @include media-tablet {
+                    margin: 10px 0 0 0;
+                }
+            }
+
+            .pet-description__breed {
+                margin: 10px 0 0 0;
+                @include font(20px, 23px, 400, normal, 0.06)
+            }
+
+            .pet-description__story,
+            .pet-description__med-info {
+                margin: 40px 0 0 0;
+
+                @include media-tablet {
+                    margin: 20px 0 0 0;
+                }
+            }
+
+            .pet-description__story {
+                @include media-tablet {
+                    @include font (13px, 14px, 400, normal, 0.06);
+                }
+            }
+
+            .pet-description__med-info {
+                list-style-type: disc;
+                margin-inline-start: 12px;
+
+                li {
+                    color: $color-primary;
+                    margin-bottom: 11px;
+
+                    @include media-tablet {
+                        margin-bottom: 6px;
+                    }
+                }
+
+                li span {
+                    color: #000000;
+                }
+            }
+        }
+    }
+}

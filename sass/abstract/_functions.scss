@@ -1,0 +1,3 @@
+@function my-clamp($max-width,$min-width,$max-screen-width, $min-screen-width) {
+    @return clamp($min-width, calc($min-width + ($max-width - $min-width)/($max-screen-width - $min-screen-width) * (100vw - $min-screen-width)), $max-width);
+  }

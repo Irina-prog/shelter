@@ -1,0 +1,109 @@
+
+
+.help {
+    margin-top: 20px;
+    color: $color-text-dark;
+    padding-bottom: 100px;
+
+    @include media-mobile-small {
+        padding-bottom: 42px;
+    }
+
+    .help__wrapper {
+        @include media-tablet {
+            width: calc(630/700*100vw);
+        }
+        @include media-mobile-big {
+            width: calc(290/300*100vw)
+        }
+        @include media-mobile-small {
+            width: auto;
+        }
+
+        h3 {
+            max-width: 380px;
+            margin: 80px auto 60px;
+            text-align: center;
+            @include media-mobile-small {
+                margin-top: 42px;
+                margin-bottom: 42px;
+            }
+            
+        }
+    }
+
+    
+
+    .help__list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 12rem;
+        row-gap: 5.6rem;
+        margin: 0 auto;
+
+        @include media-tablet {
+            width: 100%;
+            column-gap: 60px;
+        }
+        @include media-mobile-big {
+            column-gap: 1rem;
+            row-gap: 3rem;
+            justify-content: space-between;
+            width: 90vw;
+        }
+        @include media-mobile-small {
+            column-gap: 1rem;
+            row-gap: 3rem;
+            width: 90vw; 
+        }
+
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &:hover {
+                color: $color-primary;
+                opacity: 0.75;
+                @include smooth;
+            }
+        }
+
+        .list__item {
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @include media-tablet {
+                width: 16.8rem;
+            }
+            
+            @include media-mobile-small {
+                width: 130px;
+            }
+        }
+
+        .list__icon {
+            width: 6rem;
+            height: 6rem;
+            margin-bottom: 3rem;
+            @include media-mobile-small {
+                width: 5rem;
+                height: 5rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .icon__text {
+            white-space: nowrap;
+            @include font (2rem, 115%, normal, normal, 0.06em);
+            @include media-mobile-small {
+                @include font (1.5rem, 1.65rem, normal, normal, 0.06em);
+            }
+        }
+    }
+
+}

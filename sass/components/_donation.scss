@@ -1,0 +1,105 @@
+.donation {
+    background-color: $color-light-background;
+    padding-top: 7rem;
+    padding-bottom: 10rem;
+    color: $color-text-dark;
+    @include media-mobile-small {
+        padding-top: 32px;
+        padding-bottom: 42px;
+    }
+
+    .donation__wrapper {
+        display: flex;
+        flex-direction: row;
+        column-gap: 30px;
+        align-items: center;
+        
+        flex-wrap: wrap;
+        justify-content: center;
+        @include media-tablet {
+            flex-direction: column-reverse;
+            row-gap: 6rem;
+        }
+        @include media-mobile-small {
+            row-gap: 42px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        
+
+        h3 {
+            margin-top: 10px;
+            margin-bottom: 0;
+            width: 30rem;
+        }
+
+        .donation__content {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.9rem;
+            width: 38rem;
+             @include media-mobile-small {
+                width: auto;
+            }
+            
+
+            .content__bank-sign {
+                letter-spacing: 0.06em;
+                @include media-mobile-small {
+                    font-size: 15px;
+                    line-height: 160%;
+                    letter-spacing: normal;
+                }
+            }
+
+            .content__credit-card {
+                display: flex;
+                flex-direction: row;
+                column-gap: 1.5rem;
+                background-color: $color-primary;
+                padding: 10px 15px;
+                border-radius: 9px;
+                align-self: flex-start;
+            }
+
+            .content__bank-description {
+                @extend %font-add;
+                color: $color-plain;
+                @include font (1.2rem, 1.8rem, 400, italic, normal);
+                @include media-mobile-small {
+                    text-align: justify;
+                }
+            }
+
+            .link__credit-card{
+                display: flex;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $color-text-dark;
+
+                    .content__credit-card{
+                        background-color: $color-primary-lighter;
+                        @include smooth;
+                    }
+                }
+            }
+
+            .credit-card__number { 
+                @include font (2rem, 115%, normal, normal, 0.06em);
+                @include media-mobile-small {
+                    @include font (1.5rem, 1.7rem, normal, normal, 0.06em);
+                }
+            }
+        }
+
+        .donation__dog-img {
+            max-width: 90%;
+            @include media-mobile-small {
+                max-width: calc(261/320*100vw);
+            }
+        }
+
+
+    }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../assets/icons/cat.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../sass/style.css">
+    <title>Cozy House</title>
+</head>
+
+<body>
+    <header class="header header_light">
+        <div class="wrapper header__wrapper">
+            <nav class="header__top-panel">
+                <a class="logo" href="../main/index.html">
+                    <p class="logo-title">Cozy House</p>
+                    <h1 class="logo-subtitle">Shelter for pets in Boston</h1>
+                </a>
+                <button class="hamburger-button">
+                    <div class="hamburger-button__line"></div>
+                    <div class="hamburger-button__line"></div>
+                    <div class="hamburger-button__line"></div>
+                </button>
+                <div class="hamburger__menu">
+                    <ul class="navigation__links">
+                        <li><a href="../main/index.html#about" class="link link_light-theme">About the shelter</a></li>
+                        <li><a href="#"
+                                class="link link_light-theme link_active link_active_dark-theme link_disabled">Our
+                                pets</a></li>
+                        <li><a href="../main/index.html#help" class="link link_light-theme">Help the shelter</a></li>
+                        <li><a href="#contacts" class="link link_light-theme">Contacts</a> </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="pets" id="pets">
+        <div class="wrapper pets__wrapper">
+            <h3>Our friends who<br>are looking for a house</h3>
+            <div class="pets__slider">
+
+                <div class="pets__cards pets__cards_full">
+
+                </div>
+
+            </div>
+            <nav class="pet__pagination-set">
+                <button disabled class="button button_round button_pagination button_pagination-first">&lt;&lt;</button>
+                <button disabled class="button button_round button_pagination button_pagination-previous">&lt;</button>
+                <button class="button button_round button_pagination button_active button_pagination-current">1</button>
+                <button class="button button_round button_pagination button_pagination-next">&gt;</button>
+                <button class="button button_round button_pagination button_pagination-last">&gt;&gt;</button>
+            </nav>
+        </div>
+    </section>
+    <footer class="footer" id="contacts">
+        <div class="wrapper footer__wrapper">
+            <div class="footer__contacts">
+                <h3>For questions and suggestions</h3>
+                <a class="link" target="_blank" href="mailto:email@shelter.com"><span
+                        class="icon icon_letter"></span>email@shelter.com</a>
+                <a class="link" target="_blank" href="tel:+136745677554"><span class="icon icon_phone"></span>+13 674
+                    567 75 54</a>
+            </div>
+            <div class="footer__location">
+                <h3>We are waiting for your visit</h3>
+                <a class="link" target="_blank" href="https://goo.gl/maps/TaG2ruJrX5vr7DM26"><span
+                        class="icon icon_pin"></span>1 Central
+                    Street, Boston<br>(entrance from the store)</a>
+                <a class="link" target="_blank" href="https://goo.gl/maps/pprgm572wnKmGuM98"><span
+                        class="icon icon_pin"></span>18 South Park,
+                    London</a>
+            </div>
+            <img src="../../assets/images/footer-puppy.png" alt="footer__puppy-img" class="footer__puppy-img">
+        </div>
+    </footer>
+    <div class="popup">
+        <div class="popup__wrapper">
+            <button class="button button_round button_popup"></button>
+            <div class="popup__content">
+                <img src="../../assets/images/jennifer.png" alt="" class="popup__pet-picture">
+                <div class="popup__pet-description">
+                    <h3 class="pet-description__name">Jennifer</h3>
+                    <h4 class="pet-description__breed">Dog - Labrador</h4>
+                    <p class="pet-description__story">Jennifer is a sweet 2 months old Labrador that is patiently
+                        waiting to
+                        find a new forever home. This girl really enjoys being able to go outside to run and play, but
+                        won't
+                        hesitate to play up a storm in the house if she has all of her favorite toys.</p>
+                    <ul class="pet-description__med-info">
+                        <li class="med-info__age"><span><b>Age:</b> 2 months</span></li>
+                        <li class="med-info__inoculations"><span><b>Inoculations:</b> none</span></li>
+                        <li class="med-info__diseases"><span><b>Diseases:</b> none</span></li>
+                        <li class="med-info__parasites"><span><b>Parasites:</b> none</span></li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <template id="card">
+        <div class="pet__card">
+            <img src="" class="card__image" alt="">
+            <p class="card__pet-name"></p>
+            <button class="button button_on-card">Learn more</button>
+        </div>
+    </template>
+    <script src="../../js/index.js" type="module"></script>
+</body>
+
+</html>

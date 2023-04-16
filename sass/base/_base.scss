@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: Georgia, 'Arial', sans-serif;
+
+  .popup {
+    display: none;
+  }
+
+  &.popup_open {
+    overflow-y: hidden;
+
+    .popup {
+      display: block;
+    }
+  }
+
+  @include media-mobile-big {
+    .navigation__links {
+      display: flex;
+      right: -320px;
+      @include smooth;
+    }
+  }
+
+  &.hamburger_open {
+    overflow-y: hidden;
+
+    .header__top-panel {
+      overflow-y: hidden;
+    }
+
+
+
+    @include media-mobile-big {
+      .navigation__links {
+        right:0;
+        
+      }
+
+      .hamburger__menu {
+        width: 100vw;
+        position: absolute;
+        height: 100vh;
+        left: 0;
+        bottom: 0;
+        background: rgba(41, 41, 41, 0.6);
+        @include smooth;
+
+      }
+    }
+  }
+}
+
+.header {
+  background-color: #390a0a;
+}
+
+h2 {
+  font-family: 'Georgia';
+  @include font ($size: 4.4rem, $height: 5.7rem);
+
+  @include media-mobile-big {
+    @include font (3.5rem, 4.2rem);
+  }
+
+  @include media-mobile-small {
+    @include font (2.5rem, 3.2rem);
+    letter-spacing: 0.06em;
+    text-align: center;
+
+  }
+}
+
+h3 {
+  font-family: 'Georgia';
+  @include font (3.5rem, 130%, 400, normal, 0.06em);
+
+  @include media-mobile-small {
+    @include font (2.5rem, 3.2rem, 400, normal, 0.06em);
+    text-align: center;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+.link {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.navigation__links {
+  a:active {
+    text-decoration: underline solid $color-primary 3px;
+    color: $color-text-active;
+    text-underline-offset: 8px;
+
+  }
+}
+
+@keyframes slide {
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes slide-hide {
+  100% {
+    right: -320px;
+  }
+}
